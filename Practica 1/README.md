@@ -26,7 +26,7 @@ Realiza sumas, restas, multiplicaciones y divisiones.
 Un juego donde el usuario intenta adivinar un número generado aleatoriamente en un número limitado de intentos.
 
 
-: 3 Detalles de los Programas
+## :bookmark_tabs: 3 Detalles de los Programas
 
 1. Evaluación del Desempeño de Empleados
 
