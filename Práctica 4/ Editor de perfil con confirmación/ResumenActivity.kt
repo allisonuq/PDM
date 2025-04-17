@@ -12,12 +12,13 @@ class ResumenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resumen)
 
-
+        val usuario = intent.getParcelableExtra<Usuario>("USUARIO")
+        
         val tvResumen = findViewById<TextView>(R.id.tvResumen)
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
         val btnEditar = findViewById<Button>(R.id.btnEditar)
 
-        val usuario = intent.getParcelableExtra<Usuario>("USUARIO")
+       
 
         // Mostrar resumen de datos
         usuario?.let {
@@ -26,7 +27,21 @@ class ResumenActivity : AppCompatActivity() {
                 Edad: ${it.edad}
                 Ciudad: ${it.ciudad}
                 Correo: ${it.correo}
-                """.trimIndent()
+            """.trimIndent()
         }
+
+        btnConfirmar.setOnClickListener {
+            val resultIntent = Intent().apply {
+                putExtra("CONFIRMADO", true)
+                }
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
+        }
+
+        btnEditar.setOnClickListener {
+            // Volver sin confirmar
+            finish()
+        }
+
     }
 }
