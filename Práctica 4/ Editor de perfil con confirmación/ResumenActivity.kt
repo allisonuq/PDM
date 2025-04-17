@@ -16,5 +16,17 @@ class ResumenActivity : AppCompatActivity() {
         val tvResumen = findViewById<TextView>(R.id.tvResumen)
         val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
         val btnEditar = findViewById<Button>(R.id.btnEditar)
+
+        val usuario = intent.getParcelableExtra<Usuario>("USUARIO")
+
+        // Mostrar resumen de datos
+        usuario?.let {
+            tvResumen.text = """
+                Nombre: ${it.nombre}
+                Edad: ${it.edad}
+                Ciudad: ${it.ciudad}
+                Correo: ${it.correo}
+                """.trimIndent()
+        }
     }
 }
