@@ -5,12 +5,16 @@
 
 package com.ejemplo.editorperfil
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import ...
 
 class ResumenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resumen)
+
+
+        val tvResumen = findViewById<TextView>(R.id.tvResumen)
+        val btnConfirmar = findViewById<Button>(R.id.btnConfirmar)
+        val btnEditar = findViewById<Button>(R.id.btnEditar)
     }
 }
