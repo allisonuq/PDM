@@ -29,4 +29,14 @@
     android:backgroundTint="#4CAF50"
     android:textColor="#FFFFFF" />
 
+    
+    <Button
+    android:id="@+id/btnEditar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Editar de nuevo"
+    android:layout_marginTop="8dp"
+    android:backgroundTint="#03A9F4"
+    android:textColor="#FFFFFF" />
+
 </LinearLayout>
