@@ -5,12 +5,26 @@
 
 package com.ejemplo.editornota
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class OpcionesActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opciones)
+
+        // Referencias a las vistas
+        val tvNota: TextView = findViewById(R.id.tvNota)
+        val btnCorreo: Button = findViewById(R.id.btnCorreo)
+        val btnEditar: Button = findViewById(R.id.btnEditar)
+
+        // Obtener la nota recibida
+        val nota: String = intent.getStringExtra("NOTA").orEmpty()
+
+        // Mostrar la nota en el TextView
+        tvNota.text = nota
     }
 }
