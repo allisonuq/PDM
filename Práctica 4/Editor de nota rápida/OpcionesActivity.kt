@@ -8,6 +8,7 @@ package com.ejemplo.editornota
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class OpcionesActivity : AppCompatActivity() {
@@ -26,5 +27,10 @@ class OpcionesActivity : AppCompatActivity() {
 
         // Mostrar la nota en el TextView
         tvNota.text = nota
+        
+        // Acción para compartir por correo
+        btnCorreo.setOnClickListener {
+            Toast.makeText(this, "Compartido por correo", Toast.LENGTH_SHORT).show()
+        }
     }
 }
