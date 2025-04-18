@@ -4,4 +4,18 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:background="#FFFFFF">
+
+    <EditText
+    android:id="@+id/etNota"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:hint="Escribe tu nota aquí..."
+    android:gravity="top|start"
+    android:padding="12dp"
+    android:background="@android:drawable/editbox_background"
+    android:textSize="16sp"
+    android:textColor="#000000"
+    android:textColorHint="#888888" />
+
 </LinearLayout>
