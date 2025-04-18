@@ -5,6 +5,8 @@
 
 package com.ejemplo.editornota
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -31,6 +33,14 @@ class OpcionesActivity : AppCompatActivity() {
         // Acción para compartir por correo
         btnCorreo.setOnClickListener {
             Toast.makeText(this, "Compartido por correo", Toast.LENGTH_SHORT).show()
+        }
+        // Volver a la pantalla anterior (seguir editando)
+        btnEditar.setOnClickListener {
+            val resultIntent = Intent().apply {
+                putExtra("NOTA_EDITADA", nota)
+            }
+            setResult(Activity.RESULT_OK, resultIntent)
+            finish()
         }
     }
 }
