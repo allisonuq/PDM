@@ -19,4 +19,14 @@
     android:text="Aquí se mostrará la nota"
     android:gravity="top|start" />
 
+
+    <Button
+    android:id="@+id/btnCorreo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Compartir por correo"
+    android:layout_marginTop="16dp"
+    android:backgroundTint="#4CAF50"
+    android:textColor="#FFFFFF" />
+
 </LinearLayout>
