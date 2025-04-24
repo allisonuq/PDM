@@ -1,0 +1,8 @@
+dependencies {
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.5"  
+//  gestiona la navegación entre fragmentos
+
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.5"
+ // navegación con elementos de interfaz de usuario
+}
