@@ -2,5 +2,12 @@
     <!-- 1 inicio -->
     <string name="app_name">Configurador de comida</string>
     <string name="nuevo_pedido">Nuevo pedido</string>
+    
+    <!-- 2 seleccion comida  -->
+    <string name="selecciona_comida">Selecciona tu comida:</string>
+    <string name="pizza">Pizza</string>
+    <string name="hamburguesa">Hamburguesa</string>
+    <string name="ensalada">Ensalada</string>
+    <string name="siguiente">Siguiente</string>
   
 </resources>
