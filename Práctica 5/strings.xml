@@ -15,5 +15,14 @@
     <string name="bebida">Bebida</string>
     <string name="papas">Papas</string>
     <string name="postre">Postre</string>
+
+    
+    <!-- 4 resumen pedido  -->
+    <string name="comida_seleccionada">Comida seleccionada: %1$s</string>
+    <string name="extras_seleccionados">Extras: %1$s</string>
+    <string name="confirmar_pedido">Confirmar pedido</string>
+    <string name="editar_pedido">Editar pedido</string>
+    <string name="pedido_confirmado">¡Pedido confirmado!</string>
+    
   
 </resources>
