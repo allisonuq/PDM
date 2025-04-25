@@ -26,5 +26,17 @@
     </fragment>
 
     <!-- ----------------------------------------------------------------- -->
+
+    <fragment
+        android:id="@+id/seleccionExtrasFragment"
+        android:name="com.tuapp.comida.SeleccionExtrasFragment"
+        android:label="Extras" >
+        <action
+            android:id="@+id/action_seleccionExtrasFragment_to_resumenPedidoFragment"
+            app:destination="@id/resumenPedidoFragment" />
+    </fragment>
+
+      <!-- ----------------------------------------------------------------- -->
+
   
 </navigation>
