@@ -9,5 +9,11 @@
     <string name="hamburguesa">Hamburguesa</string>
     <string name="ensalada">Ensalada</string>
     <string name="siguiente">Siguiente</string>
+
+    <!-- 3 seleccion extras  -->
+    <string name="selecciona_extras">Selecciona los extras:</string>
+    <string name="bebida">Bebida</string>
+    <string name="papas">Papas</string>
+    <string name="postre">Postre</string>
   
 </resources>
