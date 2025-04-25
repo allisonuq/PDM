@@ -15,5 +15,16 @@
     </fragment>
 
     <!-- ----------------------------------------------------------------- -->
+    
+    <fragment
+        android:id="@+id/seleccionComidaFragment"
+        android:name="com.tuapp.comida.SeleccionComidaFragment"
+        android:label="Comida" >
+        <action
+            android:id="@+id/action_seleccionComidaFragment_to_seleccionExtrasFragment"
+            app:destination="@id/seleccionExtrasFragment" />
+    </fragment>
+
+    <!-- ----------------------------------------------------------------- -->
   
 </navigation>
