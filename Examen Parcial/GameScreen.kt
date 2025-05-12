@@ -41,7 +41,7 @@ fun GameScreen(navController: NavController) {
 
     Surface(modifier = Modifier.fillMaxSize()) {
         if (gameOver) {
-            // Pantalla de resultados 
+            // Pantalla de resultados
             navController.navigate("result/$score")
         } else {
             Column(
@@ -52,7 +52,7 @@ fun GameScreen(navController: NavController) {
                 Text("Tiempo: $timeLeft", style = MaterialTheme.typography.bodyLarge)
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // Color aleatorio de fondo 
+                // Color aleatorio de fondo
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -60,7 +60,50 @@ fun GameScreen(navController: NavController) {
                         .background(currentColor)
                 )
                 Spacer(modifier = Modifier.height(20.dp))
+
+                // Botones de respuesta
+                colorOptions.shuffled().forEach { color ->
+                    val colorName = getColorName(color)
+                    Button(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp),
+                        onClick = {
+                            if (color == currentColor) {
+                                score++
+                            }
+                            currentColor = generateRandomColor()
+                            colorOptions = listOf(generateRandomColor(), generateRandomColor(), generateRandomColor(), currentColor)
+                        }
+                    ) {
+                        Text(text = colorName, color = Color.Black)
+                    }
+                }
             }
         }
+    }
+}
+
+// Función para generar un color aleatorio
+fun generateRandomColor(): Color {
+    return when (Random.nextInt(20)) {
+        0 -> Color.Red
+        1 -> Color.Green
+        2 -> Color.Yellow
+        3 -> Color(0xFF9C27B0)
+        4 -> Color(0xFFFF5722)
+        else -> Color.White
+    }
+}
+
+// Función para obtener el nombre del color
+fun getColorName(color: Color): String {
+    return when (color) {
+        Color.Red -> " ROJO "
+        Color.Green -> " VERDE "
+        Color.Yellow -> " AMARILLO "
+        Color(0xFF9C27B0) -> " MORADO "
+        Color(0xFFFF5722) -> " NARANJA "
+        else -> " COLOR DESCONOCIDO "
     }
 }
