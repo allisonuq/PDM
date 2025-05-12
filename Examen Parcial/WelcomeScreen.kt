@@ -9,10 +9,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import androidx.compose.ui.text.font.FontWeight
 
 @Composable
-fun WelcomeScreen() { 
+
+fun WelcomeScreen(navController: NavController) {
     Surface(modifier = Modifier.fillMaxSize(), color = Color(0xFFF48FB1)) {
         Column(
             modifier = Modifier
@@ -33,6 +35,23 @@ fun WelcomeScreen() {
                 Text(
                     text = "Juego de Colores",
                     style = MaterialTheme.typography.headlineMedium
+                )
+            }
+
+            Button(
+                onClick = { navController.navigate("game") },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(60.dp)
+            ) {
+                Text(
+                    text = "Comenzar",
+                    style = TextStyle(
+                        fontSize = 20.sp,
+                        color = Color.Black,
+                        fontWeight = FontWeight.Bold
+                    ),
+                    modifier = Modifier.padding(10.dp)
                 )
             }
         }
